@@ -6,19 +6,27 @@ body {
 
 .cabecalho{
     display: flex;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 5rem 1.5rem;
 }
 
 .section__decodificator{
-    display: flex;
+    display: block;
     /* height: 100vh; */
-    align-items: center;
-    flex-direction: column;
-    padding-top: 3rem;
+    padding: 0 1rem;
+    
+    
+}
+
+textarea{
+    font-size: 32px;
+    color: #0A3871;
+    font-weight: 400;
+    line-height: 48px;
 }
 
 .texto{
     background-color: #EFF1FA;
+    width: 100%;
 
 }
 
@@ -26,27 +34,30 @@ body {
     font-size: 32px;
     color: #0A3871;
     font-weight: 400;
+    line-height: 48px;
 
 }
 
 .atencao{
     font-size: 12px;
     color: #343A40;
-    padding-left: 0.2rem;
+    padding: 1rem 0 0 0.2rem;
 }
 
 .botoes{
     padding: 1rem 0;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .botao-criptografar{
-    align-items: center;
     background-color: #0A3871;
     color: #ffffff;
     margin: 1rem 0;
-    padding: 1.2rem 7rem;
+    width: 95%;
+    padding: 1.2rem 0;
     border-radius: 1.5rem;
     
 }
@@ -63,7 +74,8 @@ body {
     align-items: center;
     color: #0A3871;
     border:1px solid #0A3871;
-    padding: 1.2rem 7rem;
+    width: 95%;
+    padding: 1.2rem 0;
     border-radius: 1.5rem;
     
 }
@@ -73,11 +85,14 @@ body {
     transition: .3s;
     
 }
+.container__mensagem-decodificada{
+    display: flex;
+    align-items: center;
 
+}
 .mensagem__decodificada{
     /* margin: 5rem 0;; */
     background-color: white;
-    width: 85%;
     border-radius: 1.5rem;
     height: fit-content;
     display: flex;
@@ -85,6 +100,7 @@ body {
     margin: 2rem 0;
     padding: 1rem 0;
     flex-direction: column;
+    box-shadow: 5px 5px 8px 3px rgba(194, 193, 193, 0.61);
 }
 
 .mensagem__decodificada h2{
@@ -108,7 +124,36 @@ body {
 .botao-copiar{
     color: #0A3871;
     border:1px solid #0A3871;
-    padding: 1.2rem 7rem;
+    width: 90%;
+    padding: 1.2rem;
     border-radius: 1.5rem;
     margin: 1.5rem 0;
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .cabecalho{
+        padding: 2.5rem;
+    }
+
+    .atencao{
+        
+        text-align: left;
+    }
+    .botoes{
+        /* padding: 1rem 0; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+
+    }
+
+    .botoes{
+        justify-content: space-evenly;
+        width: 95%;
+    }
+
+
 }
