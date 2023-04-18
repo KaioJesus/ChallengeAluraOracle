@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Decodificador</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header class="cabecalho">
+            <h1 class="cabecalho__logo"><img src="./imagens/logo.svg" alt="Logo alura"/></h1>
+        </header>
+        <section class="section__decodificator">
+            <div>
+                <label for="texto"></label>
+                <textarea class="texto" id="texto" cols="40" rows="20" required placeholder="Digite seu texto"></textarea>
+                <p class="atencao"><img src="./imagens/atencao.svg" alt="Ícone de atenção"/> Apenas letras minúsculas e sem acento.</p>
+                
+            </div>
+            <div class="botoes">
+                <button class="botao-criptografar">Criptografar</button>
+                <button class="botao-descriptografar">Descriptografar</button>
+
+            </div>
+            <div class="mensagem__decodificada">
+                <h2>Nenhuma mensagem encontrada</h2>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                <button class="botao-copiar">Copiar</button>
+            </div>
+        </section>
+
+    </body>
+    <script src="./js/main.js"></script>
+</html>
