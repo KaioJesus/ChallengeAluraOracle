@@ -151,6 +151,13 @@ textarea{
 .notfound{
     display: none;
 }
+
+footer p{
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 1rem;
+    color:rgba(61, 52, 52, 0.61)
+}
 @media screen and (min-width: 768px) {
 
     .cabecalho{
@@ -216,6 +223,11 @@ textarea{
 
     .notfound{
         display: block;
+    }
+
+    footer{
+        grid-column: span 2;
+        grid-row: span 2;
     }
 
 
