@@ -189,6 +189,7 @@ footer p{
     body{
         display: grid;
         grid-template-columns: 0.3fr 2fr 0.8fr;
+        /* grid-template-rows: 0.2fr 3fr 0.2fr; */
         width: 100vw;
         height: 100vh;
     }
@@ -219,6 +220,7 @@ footer p{
         display: flex;
         height: 90%;
         align-items: center;
+        justify-content: center;
     }
 
     .notfound{

@@ -1,10 +1,31 @@
-let texto = document.getElementsByClassName('texto')
-let botaoCriptografar = document.getElementsByClassName('criptografar')
+let texto = document.querySelector("textarea");
+let botaoCriptografa = document.querySelector(".botao-criptografar");
+let botaoDescriptografa = document.querySelector(".botao-descriptografar");
 
-function criptografaTexto(texto){
-    let textoCriptografado = texto.replace('/a/g', 'ai').replace('/e/g','enter').replace('/i/g','imes').replace('/o/g','ober').replace('/u/g','ufat');
-    document.write(textoCriptografado);
+function criptografaTexto(){
+    let codifica = texto.value;
+    let textoCriptografado = codifica
+    .replace(/e/gi,'enter')
+    .replace(/i/gi,'imes')
+    // /elemento/gi -> pega todos os elementos seja maiusculo ou minusculo e substitui pelo parâmetro dado, nesse exemplo eu quero pegar todas as letras 'i' e substituir po 'imes';
+    .replace(/a/gi, 'ai')
+    .replace(/o/gi,'ober')
+    .replace(/u/gi,'ufat');
+    console.log(textoCriptografado);
 
+    document.getElementsByClassName('.mensagem-decodificada').innerHTML = '<textarea readonly id="resultado">' + textoCriptografado + '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
 }
 
-botaoCriptografar.onclick = criptografaTexto;
+function descriptografaTexto(){
+    let decodifica = texto.value;
+    let textoDecofidicado = decodifica
+    .replace(/imes/gi,'i')
+    .replace(/enter/gi,'e')
+    .replace(/ai/gi, 'a')
+    .replace(/ober/gi,'o')
+    .replace(/ufat/gi,'u');
+    console.log(textoDecofidicado);
+}
+
+botaoCriptografa.onclick = criptografaTexto;
+botaoDescriptografa.onclick = descriptografaTexto;
