@@ -16,7 +16,7 @@
             <h1 class="cabecalho__logo"><img src="./imagens/logo.svg" alt="Logo alura"/></h1>
         </header>
         <section class="section__decodificator">
-            <div>
+            <div class="texto-codificado">
                 <label for="texto"></label>
                 <textarea class="texto" id="texto" cols="40" rows="10" required placeholder="Digite seu texto"></textarea>
                 <p class="atencao"><img src="./imagens/atencao.svg" alt="Ícone de atenção"/> Apenas letras minúsculas e sem acento.</p>
@@ -27,13 +27,15 @@
                 <button class="botao-descriptografar">Descriptografar</button>
 
             </div>
+        </section>
+        <section class="secao__mensagem-decodificada">
             <div class="mensagem__decodificada">
+                <img class="notfound" src="./imagens/notfound.svg">
                 <h2>Nenhuma mensagem encontrada</h2>
                 <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
                 <button class="botao-copiar">Copiar</button>
             </div>
         </section>
-
     </body>
     <script src="./js/main.js"></script>
 </html>

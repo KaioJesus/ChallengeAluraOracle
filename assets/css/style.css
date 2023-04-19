@@ -64,8 +64,13 @@ textarea{
 
 .botao-criptografar:hover{
     border: 1px solid #0A3871;
-    background-color: #EFF1FA;
-    color: #0A3871;
+    background-color: #2661a9;
+    transition: .3s;
+    
+}
+.botao-criptografar:active{
+    border: 1px solid #0A3871;
+    background-color: #051c38;
     transition: .3s;
     
 }
@@ -80,7 +85,13 @@ textarea{
     
 }
 .botao-descriptografar:hover{
-    background-color: #0A3871;
+    background-color: #34598a;
+    color: #ffffff;
+    transition: .3s;
+    
+}
+.botao-descriptografar:active{
+    background-color: #0e3c7c;
     color: #ffffff;
     transition: .3s;
     
@@ -90,6 +101,12 @@ textarea{
     align-items: center;
 
 }
+
+
+.secao__mensagem-decodificada{
+    padding: 0 1rem;
+}
+
 .mensagem__decodificada{
     /* margin: 5rem 0;; */
     background-color: white;
@@ -131,6 +148,9 @@ textarea{
     display: none;
 }
 
+.notfound{
+    display: none;
+}
 @media screen and (min-width: 768px) {
 
     .cabecalho{
@@ -153,6 +173,49 @@ textarea{
     .botoes{
         justify-content: space-evenly;
         width: 95%;
+    }
+
+
+}
+
+@media screen and (min-width: 1368px) {
+    body{
+        display: grid;
+        grid-template-columns: 0.3fr 2fr 0.8fr;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .cabecalho{
+        padding: 2.5rem 0 0 5rem;
+    }
+
+    .section__decodificator{
+        /* height: 100vh; */
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+  
+    }
+    
+    .botao-criptografar{
+        width: 80%;
+    }
+    .botao-descriptografar{
+        width: 80%;
+    }
+
+
+    .mensagem__decodificada{
+        display: flex;
+        height: 90%;
+        align-items: center;
+    }
+
+    .notfound{
+        display: block;
     }
 
 
