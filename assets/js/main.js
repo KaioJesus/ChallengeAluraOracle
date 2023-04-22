@@ -13,6 +13,7 @@ function criptografaTexto(){
     .replace(/u/gi,'ufat');
     console.log(textoCriptografado);
 
+
     document.getElementsByClassName('.mensagem-decodificada').innerHTML = '<textarea readonly id="resultado">' + textoCriptografado + '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
 }
 
@@ -26,6 +27,15 @@ function descriptografaTexto(){
     .replace(/ufat/gi,'u');
     console.log(textoDecofidicado);
 }
+
+function copia() {
+    let copyText = document.querySelector("#input");
+    copyText.select();
+    document.execCommand("copy");
+  }
+  
+  document.querySelector(".botao-copiar").addEventListener("click", copy);
+
 
 botaoCriptografa.onclick = criptografaTexto;
 botaoDescriptografa.onclick = descriptografaTexto;
