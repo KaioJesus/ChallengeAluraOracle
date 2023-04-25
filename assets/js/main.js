@@ -1,6 +1,7 @@
 let texto = document.querySelector("textarea");
 let botaoCriptografa = document.querySelector(".botao-criptografar");
 let botaoDescriptografa = document.querySelector(".botao-descriptografar");
+let msgDisplay = document.querySelector('.mensagem-decodificada');
 
 function criptografaTexto(){
     let codifica = texto.value;
@@ -11,10 +12,10 @@ function criptografaTexto(){
     .replace(/a/gi, 'ai')
     .replace(/o/gi,'ober')
     .replace(/u/gi,'ufat');
+    
+    
     console.log(textoCriptografado);
-
-
-    document.getElementsByClassName('.mensagem-decodificada').innerHTML = '<textarea readonly id="resultado">' + textoCriptografado + '</textarea>' + '<button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>'
+    document.getElementsByClassName('mensagem-decodificada').innerHTML = '<textarea readonly id="resultado">' + textoCriptografado + '</textarea>';
 }
 
 function descriptografaTexto(){
@@ -28,13 +29,13 @@ function descriptografaTexto(){
     console.log(textoDecofidicado);
 }
 
-function copia() {
-    let copyText = document.querySelector("#input");
-    copyText.select();
-    document.execCommand("copy");
-  }
+// function copia() {
+//     let copyText = document.querySelector("#input");
+//     copyText.select();
+//     document.execCommand("botao-copiar");
+//   }
   
-  document.querySelector(".botao-copiar").addEventListener("click", copy);
+//   document.querySelector(".botao-copiar").addEventListener("click", copy);
 
 
 botaoCriptografa.onclick = criptografaTexto;
