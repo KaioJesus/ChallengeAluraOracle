@@ -17,18 +17,23 @@ body {
     
 }
 
-textarea{
+.texto{
+    background-color: #EFF1FA;
+    width: 100%;
     font-size: 32px;
     color: #0A3871;
     font-weight: 400;
     line-height: 48px;
 }
 
-.texto{
-    background-color: #EFF1FA;
-    width: 100%;
-
-}
+/* textarea{
+    height: 80%;
+    padding: 0 0.5rem;
+    font-size: 32px;
+    color: #0A3871;
+    font-weight: 400;
+    line-height: 48px;
+} */
 
 .texto::placeholder{
     font-size: 32px;
@@ -43,6 +48,8 @@ textarea{
     color: #343A40;
     padding: 1rem 0 0 0.2rem;
 }
+
+/*botoes*/
 
 .botoes{
     padding: 1rem 0;
@@ -66,6 +73,7 @@ textarea{
     border: 1px solid #0A3871;
     background-color: #2661a9;
     transition: .3s;
+    cursor: pointer;
     
 }
 .botao-criptografar:active{
@@ -88,6 +96,7 @@ textarea{
     background-color: #34598a;
     color: #ffffff;
     transition: .3s;
+    cursor: pointer;
     
 }
 .botao-descriptografar:active{
@@ -96,12 +105,8 @@ textarea{
     transition: .3s;
     
 }
-.container__mensagem-decodificada{
-    display: flex;
-    align-items: center;
 
-}
-
+/* area de mostrar codigo codificado e decodificado */
 
 .secao__mensagem-decodificada{
     padding: 0 1rem;
@@ -136,6 +141,16 @@ textarea{
     text-align: center;
     line-height: 1.5rem;
 
+}
+
+.mensagem__decodificada textarea{
+    height: 80%;
+    width: 80%;
+    padding: 0 0.5rem;
+    font-size: 32px;
+    color: #0A3871;
+    font-weight: 400;
+    line-height: 48px;
 }
 
 .botao-copiar{

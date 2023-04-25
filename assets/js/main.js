@@ -1,7 +1,7 @@
 let texto = document.querySelector("textarea");
 let botaoCriptografa = document.querySelector(".botao-criptografar");
 let botaoDescriptografa = document.querySelector(".botao-descriptografar");
-let msgDisplay = document.querySelector('.mensagem-decodificada');
+let msgDisplay = document.querySelector('#mensagem__decodificada');
 
 function criptografaTexto(){
     let codifica = texto.value;
@@ -15,7 +15,8 @@ function criptografaTexto(){
     
     
     console.log(textoCriptografado);
-    document.getElementsByClassName('mensagem-decodificada').innerHTML = '<textarea readonly id="resultado">' + textoCriptografado + '</textarea>';
+    document.getElementById('mensagem__decodificada').innerHTML = '<textarea readonly id="resultado">' + textoCriptografado + '</textarea>' + '<button class="botao-copiar" id="copiar" onclick="copiar()">Copiar</button>';
+    //só funciona com id aparentemente
 }
 
 function descriptografaTexto(){
@@ -27,6 +28,8 @@ function descriptografaTexto(){
     .replace(/ober/gi,'o')
     .replace(/ufat/gi,'u');
     console.log(textoDecofidicado);
+
+    document.getElementById('mensagem__decodificada').innerHTML = '<textarea class="mensagem__resultado" readonly id="resultado">' + textoDecofidicado + '</textarea>' + '<button class="botao-copiar" id="copiar" onclick="copiar()">Copiar</button>';
 }
 
 // function copia() {
