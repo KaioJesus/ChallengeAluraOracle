@@ -160,7 +160,13 @@ body {
     padding: 1.2rem;
     border-radius: 1.5rem;
     margin: 1.5rem 0;
-    display: none;
+}
+
+.botao-copiar:hover{
+    background-color: #34598a;
+    transition: .5s;
+    color: white;
+    border:1px solid #ada2a2;
 }
 
 .notfound{

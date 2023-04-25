@@ -15,7 +15,7 @@ function criptografaTexto(){
     
     
     console.log(textoCriptografado);
-    document.getElementById('mensagem__decodificada').innerHTML = '<textarea readonly id="resultado">' + textoCriptografado + '</textarea>' + '<button class="botao-copiar" id="copiar" onclick="copiar()">Copiar</button>';
+    document.getElementById('mensagem__decodificada').innerHTML = '<textarea readonly id="resultado">' + textoCriptografado + '</textarea>' + '<button class="botao-copiar" id="copiar" onclick="copia()">Copiar</button>';
     //só funciona com id aparentemente
 }
 
@@ -29,16 +29,16 @@ function descriptografaTexto(){
     .replace(/ufat/gi,'u');
     console.log(textoDecofidicado);
 
-    document.getElementById('mensagem__decodificada').innerHTML = '<textarea class="mensagem__resultado" readonly id="resultado">' + textoDecofidicado + '</textarea>' + '<button class="botao-copiar" id="copiar" onclick="copiar()">Copiar</button>';
+    document.getElementById('mensagem__decodificada').innerHTML = '<textarea class="mensagem__resultado" readonly id="resultado" >' + textoDecofidicado + '</textarea>' + '<button class="botao-copiar" id="copiar" onclick="copia()">Copiar</button>';
 }
 
-// function copia() {
-//     let copyText = document.querySelector("#input");
-//     copyText.select();
-//     document.execCommand("botao-copiar");
-//   }
+function copia() {
+    let copyText = document.getElementById("resultado");
+    copyText.select();
+    document.execCommand('copy');
+  }
   
-//   document.querySelector(".botao-copiar").addEventListener("click", copy);
+
 
 
 botaoCriptografa.onclick = criptografaTexto;
