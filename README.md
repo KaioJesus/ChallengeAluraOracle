@@ -38,17 +38,14 @@ Por exemplo:
 
 ### Telas
 
-<div align="center">
-    ![PC results](assets/.github/preview_desktop.png)
-    ![Cell results](assets/.github/preview_cel.png)
-</div>
+![PC results](assets/.github/preview_desktop.png)
+![Cell results](assets/.github/preview_cel.png)
+
 
 ### Links
-<div align='center'>
 
-    [Solution URL](https://kaiojesus.github.io/ChallengeAluraOracle/assets/index.html)
+[Solution URL](https://kaiojesus.github.io/ChallengeAluraOracle/assets/index.html)
 
-</div>
 
 ### Ferramentas
 
